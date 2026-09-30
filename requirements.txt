@@ -1,0 +1,12 @@
+# Tested target: CPython 3.12.x, Windows 10/11 x86-64
+mediapipe==0.10.13
+numpy==1.26.4
+opencv-contrib-python==4.10.0.84
+PyAutoGUI==0.9.54
+Pillow==10.4.0
+pynput==1.7.7
+screeninfo==0.8.1
+vosk==0.3.45
+sounddevice==0.5.6
+pyttsx3==2.98
+pytest==8.3.5
