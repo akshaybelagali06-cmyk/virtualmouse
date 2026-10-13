@@ -163,3 +163,10 @@ VirtualMouse/
 ## Safety
 
 VirtualMouse can move the real cursor and send clicks/keyboard shortcuts. Test gestures with non-destructive applications first. The global `Ctrl+Alt+M` toggle is the primary emergency pause for gesture control; `Esc`/`q` closes the preview application.
+
+
+## Cursor comfort tuning
+
+The default comfort profile uses `smoothing_min_cutoff: 1.0`, `smoothing_beta: 0.12`, and `dead_zone_px: 2.5`. Lower `smoothing_min_cutoff` for steadier cursor behavior (with more lag); raise it if cursor response feels too slow. Raise `smoothing_beta` modestly if fast movements lag, and lower it if fast movements become jittery. `dead_zone_px` suppresses tiny screen-space movements; keep it around 1–3 px to avoid making the pointer feel stuck. Change one value at a time in `config.json` and restart VirtualMouse to compare.
+
+The One Euro filter estimates velocity from consecutive raw samples and uses the capture timestamp, so dropped camera frames do not force a fixed-FPS timing assumption. Run `python -m pytest -q` after changing filter code.

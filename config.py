@@ -22,9 +22,9 @@ class AppConfig:
     min_tracking_confidence: float = 0.5
     max_num_hands: int = 1
     model_complexity: int = 0
-    smoothing_min_cutoff: float = 1.2
-    smoothing_beta: float = 0.08
-    dead_zone_px: float = 2.0
+    smoothing_min_cutoff: float = 1.0
+    smoothing_beta: float = 0.12
+    dead_zone_px: float = 2.5
     active_margin_left: float = 0.08
     active_margin_right: float = 0.08
     active_margin_top: float = 0.08

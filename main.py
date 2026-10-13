@@ -76,7 +76,7 @@ class VirtualMouseApp:
                     self._handle_event(event, frame_start)
                 if self.control_enabled and config.gestures_enabled and landmarks is not None and self.gestures.state.value == "MOVE":
                     with self.profiler.timer("filter"):
-                        x, y = self.smoother.filter(float(landmarks[8, 0]), float(landmarks[8, 1]), frame_start, (self.mouse.monitor.width, self.mouse.monitor.height))
+                        x, y = self.smoother.filter(float(landmarks[8, 0]), float(landmarks[8, 1]), packet.timestamp, (self.mouse.monitor.width, self.mouse.monitor.height))
                     with self.profiler.timer("os_call"):
                         self.mouse.set_target(x, y)
                 else:
